@@ -1,3 +1,4 @@
+use std::str::FromStr;
 // quiz2.rs
 // This is a quiz for the following sections:
 // - Strings
@@ -7,8 +8,6 @@
 // you think each value is. That is, add either `string_slice` or `string`
 // before the parentheses on each line. If you're right, it will compile!
 
-// I AM NOT DONE
-
 fn string_slice(arg: &str) {
     println!("{}", arg);
 }
@@ -17,14 +16,14 @@ fn string(arg: String) {
 }
 
 fn main() {
-    ???("blue");
-    ???("red".to_string());
-    ???(String::from("hi"));
-    ???("rust is fun!".to_owned());
-    ???("nice weather".into());
-    ???(format!("Interpolation {}", "Station"));
-    ???(&String::from("abc")[0..1]);
-    ???("  hello there ".trim());
-    ???("Happy Monday!".to_string().replace("Mon", "Tues"));
-    ???("mY sHiFt KeY iS sTiCkY".to_lowercase());
+    String::from("blue");
+    String::from("red".to_string());
+    String::from(String::from("hi"));
+    String::from("rust is fun!".to_owned());
+    String::from_str("nice weather".into());
+    String::from(format!("Interpolation {}", "Station"));
+    String::from(&String::from("abc")[0..1]);
+    String::from("  hello there ".trim());
+    String::from("Happy Monday!".to_string().replace("Mon", "Tues"));
+    String::from("mY sHiFt KeY iS sTiCkY".to_lowercase());
 }
